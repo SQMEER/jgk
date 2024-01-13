@@ -1,0 +1,25 @@
+pipeline{
+	agent any
+		stages{
+		stage('First stage'){
+			steps{
+			git 'https://github.com/SQMEER/tasc.git'
+			}
+		}
+		stage('second stage'){
+			steps{
+			build 'First_job'
+		            }
+			}
+		stage('Third stage'){
+			steps{
+			echo "this is first job"
+				}
+			}
+	stage('Fourth stage'){
+			steps{
+			echo " Deployement has done"
+			}
+		}
+}
+}
