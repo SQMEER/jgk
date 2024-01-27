@@ -8,7 +8,7 @@ pipeline{
 		}
 		stage('second stage'){
 			steps{
-			build 'Frist_job'
+			build 'git_integration'
 		            }
 			}
 		stage('Third stage'){
